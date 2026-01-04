@@ -1,0 +1,1665 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XEL | The Revenue Recovery System for High-Growth E-commerce</title>
+    <meta name="description" content="Recover lost revenue from high-intent buyers who slip through the cracks. XEL owns your sales-critical conversations so you don't have to.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="keywords" content="sales conversations, e-commerce, customer conversion, sales optimization, buyer conversations">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tabbed Section Styles */
+        .tab-container {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--gray-200);
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--gray-600);
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        
+        .tab.active {
+            color: var(--black);
+            border-bottom-color: var(--black);
+            font-weight: 600;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 1.5rem 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Mobile Accordion Styles */
+        @media (max-width: 768px) {
+            /* Base mobile styles */
+            html {
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+            }
+            
+            body {
+                overflow-x: hidden;
+                width: 100%;
+                position: relative;
+            }
+            
+            /* Improved touch targets */
+            .btn, button, [role="button"] {
+                min-height: 48px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.75rem 1.5rem !important;
+            }
+            
+            /* Better form controls */
+            input, select, textarea {
+                font-size: 1rem !important;
+                padding: 0.75rem 1rem !important;
+                min-height: 48px;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+            
+            /* Improved spacing */
+            .section {
+                padding: 3rem 0 !important;
+            }
+            
+            .container {
+                padding: 0 1.25rem !important;
+            }
+            
+            /* Tab styles */
+            .tabs {
+                flex-direction: column;
+                border-bottom: none;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .tab {
+                padding: 1.25rem 1rem;
+                border: 1px solid var(--gray-200);
+                border-radius: 8px;
+                margin-bottom: 0.5rem;
+                position: relative;
+                font-size: 1rem;
+                line-height: 1.4;
+                background: var(--gray-50);
+                transition: all 0.2s ease;
+            }
+            
+            .tab:active {
+                background: var(--gray-100);
+            }
+            
+            .tab:after {
+                content: '›';
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%) rotate(90deg);
+                transition: transform 0.3s ease;
+                font-size: 1.5rem;
+                line-height: 1;
+            }
+            
+            .tab.active {
+                background: white;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                border-color: var(--gray-200);
+            }
+            
+            .tab.active:after {
+                transform: translateY(-50%) rotate(-90deg);
+            }
+            
+            .tab-content {
+                padding: 1.25rem;
+                background: white;
+                border-radius: 8px;
+                margin: 0.5rem 0 1.5rem;
+                border: 1px solid var(--gray-200);
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            
+            .tab-content p:last-child {
+                margin-bottom: 0;
+            }
+            
+            /* Improved mobile typography */
+            h1, .section-title {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+            
+            h2 {
+                font-size: 1.75rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            h3 {
+                font-size: 1.4rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            p, li, a, .btn {
+                font-size: 1rem !important;
+                line-height: 1.6 !important;
+            }
+            
+            /* Better card layouts */
+            .service-card, .pricing-card, .industry-card {
+                padding: 1.5rem !important;
+                margin: 0.5rem 0;
+            }
+            
+            /* Navigation improvements */
+            .mobile-nav-toggle {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                width: 48px;
+                height: 48px;
+                z-index: 1001;
+            }
+            
+            /* Hero section improvements */
+            .hero {
+                padding: 100px 0 60px !important;
+            }
+            
+            .hero h1 {
+                font-size: 2.25rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Better button spacing */
+            .cta-buttons {
+                gap: 1rem;
+            }
+        }
+        
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-400: #9ca3af;
+            --gray-600: #4b5563;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--black);
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            text-align: center;
+        }
+
+        /* Header */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1.2rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a56db;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .nav-links a:hover {
+            color: #1a56db;
+            background: #f0f7ff;
+        }
+
+        .nav-links .cta-button {
+            background: #1a56db;
+            color: white !important;
+            padding: 0.6rem 1.5rem !important;
+            border-radius: 8px;
+            margin-left: 1rem;
+        }
+
+        .nav-links .cta-button:hover {
+            background: #1649b8;
+            transform: translateY(-1px);
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+            color: #1a1a1a;
+            padding: 140px 0 100px;
+            text-align: center;
+            margin-top: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29-22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-29c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%231a56db' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+
+        .hero h1 {
+            font-size: 3.25rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: #111827;
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            color: #4b5563;
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #1a56db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1649b8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 86, 219, 0.2);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1a56db;
+            border: 1px solid #dbeafe;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f7ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-red {
+            background: #dc3545;
+            color: #fff;
+            border: 2px solid #dc3545;
+        }
+
+        .btn-red:hover {
+            background: #c82333;
+            border-color: #c82333;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            border: 2px solid #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            border-color: #128C7E;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #111827;
+            position: relative;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: #1a56db;
+            border-radius: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #4b5563;
+            text-align: center;
+            max-width: 700px;
+            margin: 1.5rem auto 4rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .subsection-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 4rem 0 2rem 0;
+            color: #000;
+            border-bottom: 2px solid #000;
+            padding-bottom: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .cta-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8f9fa;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .about-card {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .about-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: #000;
+        }
+
+        /* Services Section */
+        .services {
+            background: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-card p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Industries Section */
+        .industries {
+            background: #f8f9fa;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .industry-card {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .industry-card h3 {
+            color: #000;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Process Section */
+        .process {
+            background: #000;
+            color: #fff;
+        }
+
+        .process .section-title {
+            color: #fff;
+        }
+
+        .process .section-subtitle {
+            color: #ccc;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .process-card {
+            background: #333;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: #f8f9fa;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #1a56db;
+            transform: scale(1.03);
+        }
+
+        .popular-tag {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: #1a56db;
+            color: white;
+            padding: 0.3rem 2rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transform: rotate(45deg);
+            width: 150px;
+            text-align: center;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .step-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a56db;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #e0f2ff;
+            border-radius: 50%;
+            margin-left: -10px;
+        }
+
+        .pricing-price {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pricing-features li:before {
+            content: "✓ ";
+            color: #25D366;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: #fff;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            background: #e9ecef;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: #000;
+            color: #fff;
+        }
+
+        .testimonials .section-title {
+            color: #fff;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            color: #000;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-role {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 100px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .contact-card {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-card h3 {
+            color: #000;
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .contact-info {
+            margin: 1rem 0;
+        }
+
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+
+        .demo-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .demo-info {
+            padding: 2rem;
+        }
+
+        .demo-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .demo-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .demo-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .demo-features li:before {
+            content: "✓";
+            color: #25D366;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f9fafb;
+            padding: 5rem 0 2rem;
+            margin-top: 4rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Mobile Navigation Dashboard */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .mobile-nav-dashboard {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .mobile-nav-dashboard.active {
+            display: block;
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .mobile-nav-close {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .mobile-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .mobile-nav-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+        }
+
+        .mobile-nav-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .mobile-nav-card .title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .mobile-nav-card .desc {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.3;
+        }
+
+        .mobile-cta-section {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .mobile-cta-section h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .mobile-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-cta-buttons .btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            /* Keep existing hero styles */
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            /* Navigation */
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-nav-toggle {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                width: 48px;
+                height: 48px;
+                z-index: 1001;
+            }
+            
+            /* Layout improvements */
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .section-title {
+                font-size: 2rem !important;
+                line-height: 1.2 !important;
+            }
+
+            .subsection-title {
+                font-size: 1.5rem !important;
+                line-height: 1.3 !important;
+            }
+
+            .section {
+                padding: 3rem 0 !important;
+            }
+
+            .container {
+                padding: 0 1.25rem !important;
+            }
+
+            /* Grid layouts */
+            .about-grid,
+            .services-grid,
+            .industries-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            /* Card styles */
+            .service-card,
+            .about-card,
+            .industry-card,
+            .pricing-card {
+                padding: 1.75rem !important;
+                margin: 0.5rem 0;
+                border-radius: 12px !important;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+            }
+
+            .mobile-nav-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Show all sections on mobile */
+            #services,
+            #industries,
+            #process,
+            #testimonials,
+            #faq {
+                display: block !important;
+            }
+
+            /* Form elements */
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea,
+            select {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .demo-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Further refine for very small screens */
+            .mobile-nav-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .mobile-nav-card {
+                padding: 1.25rem;
+            }
+            
+            /* Adjust typography for very small screens */
+            h1, .section-title {
+                font-size: 1.8rem !important;
+            }
+            
+            h2 {
+                font-size: 1.6rem !important;
+            }
+            
+            h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            /* Adjust spacing */
+            .section {
+                padding: 2.5rem 0 !important;
+            }
+            
+            /* Make sure buttons are full width on very small screens */
+            .btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">XEL</a>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact" class="cta-button">Book a Call</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileNav()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Dashboard -->
+    <div class="mobile-nav-dashboard" id="mobileNavDashboard">
+        <div class="mobile-nav-header">
+            <div class="logo" style="color: #fff;">XEL</div>
+            <button class="mobile-nav-close" onclick="toggleMobileNav()">×</button>
+        </div>
+        
+        <div class="mobile-nav-grid">
+            <a href="#how-it-works" class="mobile-nav-card" onclick="toggleMobileNav()">
+                <span class="icon">🤖</span>
+                <div class="title">How It Works</div>
+                <div class="desc">Learn about our sales conversation system</div>
+            </a>
+            
+            <a href="#pricing" class="mobile-nav-card" onclick="toggleMobileNav()">
+                <span class="icon">💰</span>
+                <div class="title">Pricing</div>
+                <div class="desc">Discover our pricing plans</div>
+            </a>
+            
+            <a href="#contact" class="mobile-nav-card" onclick="toggleMobileNav()">
+                <span class="icon">📞</span>
+                <div class="title">Contact Us</div>
+                <div class="desc">Get in touch with our team</div>
+            </a>
+        </div>
+        
+        <div class="mobile-cta-section">
+            <h3>Ready to Get Started?</h3>
+            <div class="mobile-cta-buttons">
+                <a href="https://calendly.com/outreach-xelai/60min" class="btn btn-primary" onclick="toggleMobileNav()">Book a Call</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: var(--white); padding: 180px 0 100px;">
+        <div class="container" style="max-width: 1100px;">
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 3.5rem; font-weight: 700; line-height: 1.1; color: var(--black); margin-bottom: 1.5rem; letter-spacing: -1px;">
+                    Your Silent Revenue Leak:<br>
+                    <span style="color: var(--gray-600);">High-Intent Buyers Abandoning Unanswered</span>
+                </h1>
+                <p style="font-size: 1.4rem; line-height: 1.6; color: var(--gray-600); margin-bottom: 2.5rem; max-width: 700px;">
+                    XEL recovers lost revenue by owning sales-critical conversations that currently fall through the cracks.
+                </p>
+                <div style="display: flex; gap: 1rem; margin-top: 2.5rem;">
+                    <a href="#contact" class="btn" style="background: var(--black); color: white; padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; transition: all 0.2s;">Calculate Your Revenue Leak</a>
+                    <a href="#how-it-works" class="btn" style="background: transparent; color: var(--black); padding: 0.9rem 2rem; border: 1px solid var(--black); border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 1.1rem; display: inline-block; transition: all 0.2s;">See How It Works</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Unseen Problem Section -->
+    <section style="background: var(--gray-50); padding: 6rem 0;">
+        <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--black); margin-bottom: 1rem;">
+                    The $1M+ Blind Spot in Your Funnel
+                </h2>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 1.25rem; line-height: 1.6; color: var(--gray-600);">
+                    At scale, unowned sales conversations become your largest revenue leak.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 3rem;">
+                <div style="background: white; padding: 2rem; border-radius: 8px; border-left: 4px solid var(--black);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--black);">The Ownership Gap</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: var(--gray-600);">
+                            <span style="position: absolute; left: 0; color: var(--black);">→</span>
+                            CRO owns pages, not conversations
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: var(--gray-600);">
+                            <span style="position: absolute; left: 0; color: var(--black);">→</span>
+                            Support's KPI is resolution, not revenue
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative; color: var(--gray-600);">
+                            <span style="position: absolute; left: 0; color: var(--black);">→</span>
+                            Sales can't scale to every visitor
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 8px; border-left: 4px solid var(--black);">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--black);">The Cost of Inaction</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span style="font-weight: 500;">Abandoned Carts</span>
+                                <span style="font-weight: 700;">15-30%</span>
+                            </div>
+                            <div style="height: 4px; background: var(--gray-200); border-radius: 2px; overflow: hidden;">
+                                <div style="width: 75%; height: 100%; background: var(--black);"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                <span style="font-weight: 500;">High-Intent Dropoffs</span>
+                                <span style="font-weight: 700;">20-40%</span>
+                            </div>
+                            <div style="height: 4px; background: var(--gray-200); border-radius: 2px; overflow: hidden;">
+                                <div style="width: 90%; height: 100%; background: var(--black);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; max-width: 700px; margin: 0 auto; padding: 2rem; background: var(--white); border-radius: 8px; border: 1px solid var(--gray-200);">
+                <p style="font-size: 1.25rem; color: var(--gray-600); line-height: 1.6; margin: 0;">
+                    At ₹3L+ daily revenue, that's ₹1.5-3.6M monthly left on the table.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Existing Solutions Fail Section -->
+    <section style="padding: 6rem 0; background: var(--white);">
+        <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--black); margin-bottom: 1rem;">
+                    Why Everything Else Fails
+                </h2>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 1.25rem; line-height: 1.6; color: var(--gray-600);">
+                    Common approaches that miss the point of sales conversations.
+                </p>
+            </div>
+
+            <div class="tab-container">
+                <div class="tabs">
+                    <div class="tab active" data-tab="cro">CRO Tools: Optimize pages, not conversations</div>
+                    <div class="tab" data-tab="support">Support: Resolves tickets, doesn't sell</div>
+                    <div class="tab" data-tab="sales">Sales Teams: Can't scale with traffic</div>
+                    <div class="tab" data-tab="chatbots">Chatbots: Kill trust with templates</div>
+                </div>
+                
+                <div class="tab-content active" id="cro">
+                    <div style="padding: 2rem; border: 1px solid var(--gray-200); border-radius: 8px;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--black); margin-bottom: 1rem;">
+                            CRO Tools
+                            <span style="display: block; font-weight: 400; color: var(--gray-600); font-size: 1rem; margin-top: 0.25rem;">Optimize pages, not conversations</span>
+                        </h3>
+                        <p style="color: var(--gray-600); line-height: 1.6; margin: 0; font-size: 0.95rem;">
+                            Can't answer specific questions or handle objections in real-time. They focus on page elements but miss the human conversation that drives actual purchases.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="support">
+                    <div style="padding: 2rem; border: 1px solid var(--gray-200); border-radius: 8px;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--black); margin-bottom: 1rem;">
+                            Support Teams
+                            <span style="display: block; font-weight: 400; color: var(--gray-600); font-size: 1rem; margin-top: 0.25rem;">Resolve tickets, don't sell</span>
+                        </h3>
+                        <p style="color: var(--gray-600); line-height: 1.6; margin: 0; font-size: 0.95rem;">
+                            Trained for service, not for identifying and closing high-value opportunities. Their goal is to resolve issues, not to understand and overcome buying objections.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="sales">
+                    <div style="padding: 2rem; border: 1px solid var(--gray-200); border-radius: 8px;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--black); margin-bottom: 1rem;">
+                            Sales Teams
+                            <span style="display: block; font-weight: 400; color: var(--gray-600); font-size: 1rem; margin-top: 0.25rem;">Don't scale with traffic</span>
+                        </h3>
+                        <p style="color: var(--gray-600); line-height: 1.6; margin: 0; font-size: 0.95rem;">
+                            Cost-prohibitive to have salespeople available 24/7 for every visitor. Even the best teams can't be everywhere at once, leading to missed opportunities.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="chatbots">
+                    <div style="padding: 2rem; border: 1px solid var(--gray-200); border-radius: 8px;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--black); margin-bottom: 1rem;">
+                            Chatbots
+                            <span style="display: block; font-weight: 400; color: var(--gray-600); font-size: 1rem; margin-top: 0.25rem;">Kill trust with templates</span>
+                        </h3>
+                        <p style="color: var(--gray-600); line-height: 1.6; margin: 0; font-size: 0.95rem;">
+                            Scripted responses frustrate high-value buyers and damage brand perception. They can't handle nuanced conversations or adapt to individual buyer needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; max-width: 700px; margin: 0 auto; padding: 2rem; background: var(--gray-50); border-radius: 8px;">
+                <p style="font-size: 1.25rem; color: var(--black); line-height: 1.6; margin: 0 0 1rem 0; font-weight: 500;">
+                    These approaches fail because they treat conversations as a cost center.
+                </p>
+                <p style="font-size: 1.25rem; color: var(--gray-600); line-height: 1.6; margin: 0;">
+                    XEL treats them as your highest-leverage revenue channel.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The XEL System Section -->
+    <section style="padding: 6rem 0; background: var(--gray-50);">
+        <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--black); margin-bottom: 1rem;">
+                    The XEL Revenue Recovery System
+                </h2>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 1.25rem; line-height: 1.6; color: var(--gray-600);">
+                    We own your sales-critical conversations so you don't have to.
+                </p>
+            </div>
+
+            <div style="display: grid; gap: 2rem; max-width: 800px; margin: 0 auto 4rem;">
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                    <div style="flex: 0 0 2.5rem; height: 2.5rem; background: var(--black); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem;">1</div>
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin: 0 0 0.5rem 0; color: var(--black);">We Own the Conversation</h3>
+                        <p style="color: var(--gray-600); margin: 0; line-height: 1.6;">
+                            Full responsibility for identifying and engaging high-intent buyers at scale.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                    <div style="flex: 0 0 2.5rem; height: 2.5rem; background: var(--black); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem;">2</div>
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin: 0 0 0.5rem 0; color: var(--black);">We Handle the Objections</h3>
+                        <p style="color: var(--gray-600); margin: 0; line-height: 1.6;">
+                            Real-time handling of purchase barriers with human-like understanding.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                    <div style="flex: 0 0 2.5rem; height: 2.5rem; background: var(--black); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem;">3</div>
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin: 0 0 0.5rem 0; color: var(--black);">We Drive the Close</h3>
+                        <p style="color: var(--gray-600); margin: 0; line-height: 1.6;">
+                            Proactive guidance through the final steps of the buyer's journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: white; border-radius: 8px; padding: 2.5rem; max-width: 700px; margin: 0 auto; text-align: center; border: 1px solid var(--gray-200);">
+                <h3 style="font-size: 1.5rem; margin: 0 0 1rem 0; color: var(--black);">The Difference? We're Invested in Your Revenue</h3>
+                <p style="color: var(--gray-600); margin: 0 0 1.5rem 0; line-height: 1.6;">
+                    Unlike agencies or tools, our incentives are aligned with your revenue growth. We price based on responsibility, not activity.
+                </p>
+                <a href="#contact" class="btn" style="background: var(--black); color: white; padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block;">See If You Qualify</a>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section style="padding: 6rem 0; background: white;">
+        <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 2rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--black); margin-bottom: 1rem;">
+                    Revenue, Not Cost
+                </h2>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 1.25rem; line-height: 1.6; color: var(--gray-600);">
+                    Custom-scoped, responsibility-based pricing aligned to revenue impact
+                </p>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto; background: var(--gray-50); border-radius: 8px; padding: 2.5rem;">
+                <h3 style="font-size: 1.5rem; margin: 0 0 1.5rem 0; color: var(--black);">How We Structure Engagements</h3>
+                
+                <div style="display: grid; gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div style="flex: 0 0 2rem; height: 2rem; background: var(--black); color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem;">1</div>
+                        <div>
+                            <p style="color: var(--gray-600); margin: 0; line-height: 1.6;">
+                                <strong>Base Engagement</strong><br>
+                                A fixed monthly retainer based on your traffic, sales volume, and scope of responsibility
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div style="flex: 0 0 2rem; height: 2rem; background: var(--black); color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem;">2</div>
+                        <div>
+                            <p style="color: var(--gray-600); margin: 0; line-height: 1.6;">
+                                <strong>Performance Alignment</strong><br>
+                                Optional performance components discussed when appropriate for your business
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div style="flex: 0 0 2rem; height: 2rem; background: var(--black); color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9rem;">3</div>
+                        <div>
+                            <p style="color: var(--gray-600); margin: 0; line-height: 1.6;">
+                                <strong>Commitment</strong><br>
+                                Minimum engagement period to ensure meaningful impact
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; border-radius: 6px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid var(--gray-200);">
+                    <p style="color: var(--gray-600); margin: 0; line-height: 1.6; font-size: 0.95rem;">
+                        <strong>Note:</strong> We work with brands globally. Pricing is scoped and denominated in INR or USD based on region.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <p style="color: var(--gray-600); margin: 0 0 1.5rem 0; line-height: 1.6; font-size: 0.95rem;">
+                        For established e-commerce businesses with significant sales volume
+                    </p>
+                    <a href="#contact" class="btn" style="background: var(--black); color: white; padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block;">Discuss Your Needs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section style="padding: 6rem 0; background: var(--black); color: white;" id="contact">
+        <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 2rem; text-align: center;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2;">
+                Ready to recover your lost revenue?
+            </h2>
+            <p style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2.5rem; color: var(--gray-300); max-width: 600px; margin-left: auto; margin-right: auto;">
+                A 30-minute revenue audit. We'll show you exactly what you're leaving on the table.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                <a href="https://calendly.com/outreach-xelai/60min" class="btn" style="background: white; color: var(--black); padding: 1rem 2.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 1.1rem; display: inline-block; transition: all 0.2s;">Book a Revenue Audit</a>
+                <a href="tel:+918081139546" class="btn" style="background: transparent; color: white; padding: 1rem 2.5rem; border: 1px solid var(--gray-600); border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s;">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
+                        <path d="M3.217 6.925c1.291-2.215 3.6-3.83 6.26-4.11a.75.75 0 0 1 .772.356l1.453 2.315a.75.75 0 0 1-.163.944l-1.25 1.04a.25.25 0 0 0-.08.198v2.5a.25.25 0 0 0 .08.198l1.25 1.04a.75.75 0 0 1 .163.944l-1.453 2.315a.75.75 0 0 1-.772.356c-2.66-.28-4.969-1.895-6.26-4.11a10.72 10.72 0 0 1-.947-3.98.75.75 0 0 1 .75-.75 10.72 10.72 0 0 1 3.98.947z" fill="currentColor"/>
+                    </svg>
+                    +91 80811 39546
+                </a>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 1.5rem; max-width: 500px; margin: 0 auto; text-align: left;">
+                <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="flex: 0 0 24px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 style="color: white; font-size: 1rem; margin: 0 0 0.5rem 0;">For established e-commerce businesses</h4>
+                        <p style="color: var(--gray-500); margin: 0; font-size: 0.95rem; line-height: 1.5;">
+                            For established brands doing ₹3L+ daily revenue. We can refer you if you're not there yet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--black); color: var(--gray-400); padding: 4rem 0 2rem; font-size: 0.95rem; border-top: 1px solid var(--gray-800);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                <div>
+                    <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1.25rem;">XEL</h3>
+                    <p style="margin: 0 0 1.5rem 0; line-height: 1.6; color: var(--gray-400);">
+                        The revenue recovery system for high-growth e-commerce brands.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 style="color: white; font-size: 0.9rem; margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.7;">Navigation</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li><a href="#" style="color: var(--gray-400); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">Home</a></li>
+                        <li><a href="#how-it-works" style="color: var(--gray-400); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">How It Works</a></li>
+                        <li><a href="#pricing" style="color: var(--gray-400); text-decoration: none; transition: color 0.2s; font-size: 0.95rem;">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="color: white; font-size: 0.9rem; margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.7;">Contact</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem;">
+                        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink: 0; margin-top: 2px;">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                            </svg>
+                            <a href="mailto:hello@xelai.in" style="color: var(--gray-400); text-decoration: none; transition: color 0.2s;">hello@xelai.in</a>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink: 0; margin-top: 2px;">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
+                            </svg>
+                            <a href="tel:+918081139546" style="color: var(--gray-400); text-decoration: none; transition: color 0.2s;">+91 80811 39546</a>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink: 0; margin-top: 2px;">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                            </svg>
+                            <span>Mumbai, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid var(--gray-800); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+                <p style="color: var(--gray-500); margin: 0; font-size: 0.9rem;">
+                    2026 XEL. All rights reserved.
+                </p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" style="color: var(--gray-500); text-decoration: none; transition: color 0.2s; font-size: 0.9rem;">Privacy Policy</a>
+                    <a href="#" style="color: var(--gray-500); text-decoration: none; transition: color 0.2s; font-size: 0.9rem;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs and contents
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    tab.classList.add('active');
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+
+        // Mobile navigation toggle
+        function toggleMobileNav() {
+            const dashboard = document.getElementById('mobileNavDashboard');
+            dashboard.classList.toggle('active');
+            
+            // Prevent body scroll when nav is open
+            if (dashboard.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close mobile nav when clicking outside
+        document.getElementById('mobileNavDashboard').addEventListener('click', function(e) {
+            if (e.target === this) {
+                toggleMobileNav();
+            }
+        });
+
+        // Auto-scroll to demo section when page loads
+        window.addEventListener('load', function() {
+            // Add demo links to navigation
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) {
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile nav on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const dashboard = document.getElementById('mobileNavDashboard');
+                if (dashboard.classList.contains('active')) {
+                    toggleMobileNav();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
